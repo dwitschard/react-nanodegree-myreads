@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { MyReadsContainer } from "./features/my-reads/MyReadsContainer";
 import { useEffect, useState } from "react";
 import * as BooksAPI from "./BooksAPI";
-import { toDomain } from "./utils";
+import { toDomain } from "./shared/utils";
 
 function App() {
   const [books, setBooks] = useState([]);
