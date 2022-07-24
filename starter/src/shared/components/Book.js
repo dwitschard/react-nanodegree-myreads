@@ -1,17 +1,12 @@
-import { BookShelfChanger } from "./BookShelfChanger";
 import PropTypes from "prop-types";
+import { bookCategories } from "../../utils";
 
-const toCommaSeparatedString = (list) => {
-  if (list) {
-    return list.join(", ");
-  }
-  return list;
-};
+const toCommaSeparatedString = (list) => (list ? list.join(", ") : list);
 
 export const Book = ({
   book,
-  showShelfChanger = true,
   onShelfSelectHandler,
+  showShelfChanger = true,
 }) => {
   return (
     (book && (
@@ -52,6 +47,30 @@ const BookCover = ({ height = 193, width = 128, backgroundImage }) => {
         backgroundImage: "url(" + backgroundImage + ")",
       }}
     />
+  );
+};
+
+const BookShelfChanger = ({ onSelect, shelf }) => {
+  const onChangeHandler = (onSelect) => {
+    return (e) => {
+      e.preventDefault();
+      return onSelect(e.target.value);
+    };
+  };
+
+  return (
+    <div className="book-shelf-changer">
+      <select onChange={onChangeHandler(onSelect)} value={shelf || "none"}>
+        <option value="none" disabled>
+          Move to...
+        </option>
+        {bookCategories.map((category) => (
+          <option key={category.key} value={category.key}>
+            {category.value}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 

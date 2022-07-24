@@ -8,3 +8,9 @@ export const toDomain = (book, overridingShelf) => {
     shelf: overridingShelf || shelf,
   };
 };
+
+export const bookCategories = [
+  { key: "read", value: "Read" },
+  { key: "currentlyReading", value: "Currently Reading" },
+  { key: "wantToRead", value: "Want to Read" },
+];

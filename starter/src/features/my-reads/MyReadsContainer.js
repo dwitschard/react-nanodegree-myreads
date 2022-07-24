@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import { BookShelf } from "./components/BookShelf";
+import { bookCategories } from "../../utils";
 
 export const MyReadsContainer = ({ books, onShelfSelectHandler }) => {
   const getBooksByCategory = (books, category) =>
     books.filter((book) => book.shelf === category);
-
-  const categories = [
-    { key: "read", value: "Read" },
-    { key: "currentlyReading", value: "Currently Reading" },
-    { key: "wantToRead", value: "Want to Read" },
-  ];
 
   return (
     <div className="list-books">
@@ -18,7 +13,7 @@ export const MyReadsContainer = ({ books, onShelfSelectHandler }) => {
       </div>
       <div className="list-books-content">
         <div>
-          {categories.map((category) => (
+          {bookCategories.map((category) => (
             <BookShelf
               onShelfSelectHandler={onShelfSelectHandler}
               key={category.key}
