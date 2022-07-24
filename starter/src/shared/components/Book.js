@@ -16,9 +16,10 @@ export const Book = ({
           {showShelfChanger && (
             <BookShelfChanger
               shelf={book.shelf}
-              onSelect={(selectedShelf) =>
-                onShelfSelectHandler(book, selectedShelf)
-              }
+              onSelect={(selectedShelf) => {
+                book.shelf = selectedShelf;
+                onShelfSelectHandler(book, selectedShelf);
+              }}
             />
           )}
         </div>
