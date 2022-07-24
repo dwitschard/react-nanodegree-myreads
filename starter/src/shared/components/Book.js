@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
-import { bookCategories } from "../../utils";
-
-const toCommaSeparatedString = (list) => (list ? list.join(", ") : list);
+import { bookCategories, toCommaSeparatedString } from "../../utils";
 
 export const Book = ({
   book,

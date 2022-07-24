@@ -14,3 +14,5 @@ export const bookCategories = [
   { key: "currentlyReading", value: "Currently Reading" },
   { key: "wantToRead", value: "Want to Read" },
 ];
+
+export const toCommaSeparatedString = (list) => (list ? list.join(", ") : list);
