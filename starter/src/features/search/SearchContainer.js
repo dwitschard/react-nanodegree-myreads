@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import * as BooksAPI from "../../BooksAPI";
 import { useState } from "react";
 import { Book } from "../../shared/components/Book";
-import { toDomain } from "../../utils";
+import { toDomain } from "../../shared/utils";
 
 export const SearchContainer = ({ booksInShelf, onShelfSelectHandler }) => {
   const [searchResults, setSearchResults] = useState([]);

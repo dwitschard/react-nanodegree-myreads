@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BookShelf } from "./components/BookShelf";
-import { bookCategories } from "../../utils";
+import { bookCategories } from "../../shared/utils";
 
 export const MyReadsContainer = ({ books, onShelfSelectHandler }) => {
   const getBooksByCategory = (books, category) =>

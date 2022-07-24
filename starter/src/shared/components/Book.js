@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { bookCategories, toCommaSeparatedString } from "../../utils";
+import { bookCategories, toCommaSeparatedString } from "../utils";
 
 export const Book = ({
   book,
