@@ -76,5 +76,5 @@ const BookShelfChanger = ({ onSelect, shelf }) => {
 BookCover.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
-  backgroundImage: PropTypes.string.isRequired,
+  backgroundImage: PropTypes.string,
 };

@@ -4,7 +4,7 @@ export const toDomain = (book, overridingShelf) => {
     id,
     title,
     authors,
-    thumbnail: book.thumbnail || imageLinks.thumbnail,
+    thumbnail: book.thumbnail || imageLinks ? imageLinks.thumbnail : null,
     shelf: overridingShelf || shelf,
   };
 };
